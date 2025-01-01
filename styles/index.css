@@ -1,0 +1,33 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --green_l: #55FF55;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  position: relative;
+  height: 100vh;
+  padding: 0 64px;
+  background: var(--black);
+  color: var(--green_l);
+  display: grid;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

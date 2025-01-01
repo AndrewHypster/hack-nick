@@ -1,0 +1,17 @@
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100vw;
+  height: 0;
+  overflow: hidden;
+  background-color: aliceblue;
+  animation: height 1s 4s forwards;
+}
+
+@keyframes height {
+  100% {
+    height: calc(100vh - 3rem * 2 - env(titlebar-area-top, 0px));
+  }
+}

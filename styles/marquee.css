@@ -1,0 +1,25 @@
+.marquee-text {
+  overflow: clip;
+}
+
+.marquee-track {
+  display: flex;
+  padding-left: 0.8rem;
+  gap: 0.8rem;
+  width: max-content;
+  animation: marquee var(--speed, 20s) linear infinite
+    var(--direction, forwards);
+}
+
+.marquee-text p {
+  font-family: "Stick No Bills", serif;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
