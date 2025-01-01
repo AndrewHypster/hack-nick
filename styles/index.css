@@ -11,10 +11,7 @@
 }
 
 body {
-
-  position: relative;
   height: 100vh;
-  padding: 0 64px;
   background: var(--black);
   color: var(--green_l);
   display: grid;

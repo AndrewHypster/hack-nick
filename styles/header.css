@@ -1,9 +1,5 @@
 header {
-  position: fixed;
-  left: 0;
-  top: 0%;
   transform: translateY(-100%);
-  z-index: -1;
   width: 100vw;
   height: 96px;
   overflow: hidden;
@@ -13,6 +9,7 @@ header {
 
 @keyframes to-midle {
   100% {
+    margin-top: 50vh;
     transform: translateY(-50%);
   }
 }
