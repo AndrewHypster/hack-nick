@@ -14,7 +14,7 @@ body {
   height: 100vh;
   background: var(--black);
   color: var(--green_l);
-  display: grid;
+  /* display: grid; */
 }
 
 ul {
