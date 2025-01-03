@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+  overflow: hidden;
+}
+
 header {
   height: 100vh;
 }
