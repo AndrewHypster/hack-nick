@@ -1,4 +1,6 @@
 .marquee-text {
+  width: 100vw;
+  overflow: hidden;
   display: grid;
 }
 
