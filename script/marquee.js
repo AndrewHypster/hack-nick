@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((userIp) => {
       // IP для прикладу або можете використовувати поточний IP
       const apiKey = "3cd9877dd00e60"; // API ключ для ipinfo.io або іншого сервісу
+      console.log("api:" + userIp);
+      
 
       fetch(`https://ipinfo.io/${userIp}/json?token=${apiKey}`)
         .then((response) => response.json())
