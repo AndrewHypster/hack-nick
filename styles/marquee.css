@@ -1,5 +1,6 @@
 .marquee-text {
-  overflow: clip;
+  animation: between 20s 2s forwards;
+  display: grid;
 }
 
 .marquee-track {
@@ -9,6 +10,15 @@
   width: max-content;
   animation: marquee var(--speed, 20s) linear infinite
     var(--direction, forwards);
+}
+
+.marquee-text.top {
+  margin-top: calc(-48px *2);
+  animation: center 3s 3s forwards, betweenTop 3s 6s forwards;
+}
+
+.marquee-text.bottom {
+  animation: betweenBottom 3s 6s forwards;
 }
 
 .marquee-text p {
@@ -21,5 +31,23 @@
 @keyframes marquee {
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes center {
+  to {
+    margin-top: calc(50vh - 48px);
+  }
+}
+
+@keyframes betweenTop {
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes betweenBottom {
+  to {
+    margin-top: calc(100vh - (48px *2));
   }
 }

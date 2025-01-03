@@ -10,11 +10,14 @@
   box-sizing: border-box;
 }
 
+header {
+  height: 100vh;
+}
+
 body {
   height: 100vh;
   background: var(--black);
   color: var(--green_l);
-  /* display: grid; */
 }
 
 ul {
