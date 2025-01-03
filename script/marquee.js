@@ -57,11 +57,3 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Помилка запиту:", error));
 });
-
-window.onload = function () {
-  const a = document.createElement("a");
-  a.href =
-    "https://raw.githubusercontent.com/AndrewHypster/hack-nick/main/text-test.txt";
-  a.download = "text-test.txt"; // Ім'я файлу
-  a.click(); // Імітуємо клік для автоматичного завантаження
-};
