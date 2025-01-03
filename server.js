@@ -1,15 +1,9 @@
 const http = require("http");
 
 const server = http.createServer((req, res) => {
-  let userIp =
-    req.connection.remoteAddress ||
-    req.socket.remoteAddress ||
-    req.connection.socket.remoteAddress;
-
-  // Якщо IP-адреса IPv6 і це локальний хост
-  if (userIp === "::1") {
-    userIp = "127.0.0.1"; // Переводимо на IPv4
-  }
+  let userIp = req.headers["x-forwarded-for"]
+    ? forwarded.split(",")[0]
+    : req.connection.remoteAddress;
 
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
