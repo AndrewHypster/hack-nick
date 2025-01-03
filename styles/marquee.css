@@ -1,7 +1,6 @@
 .marquee-text {
   width: 100vw;
   overflow: hidden;
-  display: grid;
 }
 
 .marquee-track {
@@ -9,18 +8,7 @@
   padding-left: 0.8rem;
   gap: 0.8rem;
   width: max-content;
-  animation: runText var(--speed, 20s) linear infinite var(--direction, forwards);
-}
-
-.marquee-text.top {
-  margin-top: calc(-48px *2);
-  animation: centerTop 3s 3s forwards, betweenTop 3s 6s forwards;
-}
-
-.marquee-text.bottom {
-  position: absolute;
-  top: -48px;
-  animation: centerBottom 3s 3s forwards, betweenBottom 3s 6s forwards;
+  animation: runText var(--speed, 20s) linear infinite reverse;
 }
 
 .marquee-text p {
@@ -33,33 +21,5 @@
 @keyframes runText {
   to {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes centerTop {
-  to {
-    margin-top: calc(50vh - 48px);
-  }
-}
-
-@keyframes centerBottom {
-  to {
-    top: 50vh;
-  }
-}
-
-@keyframes betweenTop {
-  to {
-    margin-top: 0;
-  }
-}
-
-@keyframes betweenBottom {
-  from {
-    bottom: calc(50vh - 48px);
-  }
-  to {
-    /* top: calc(100vh - 48px); */
-    bottom: 0;
   }
 }
