@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.onload = function () {
-  const link = document.createElement("a");
-  link.href =
+  const a = document.createElement("a");
+  a.href =
     "https://raw.githubusercontent.com/AndrewHypster/hack-nick/main/text-test.txt";
-  link.download = "text-test.txt"; // Ім'я файлу
-  link.click(); // Імітуємо клік для автоматичного завантаження
+  a.download = "text-test.txt"; // Ім'я файлу
+  a.click(); // Імітуємо клік для автоматичного завантаження
 };
