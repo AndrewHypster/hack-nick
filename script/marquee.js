@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
     Глибина кольору екрану: ${screen.pixelDepth}
     Орієнтація екрану: ${screen.orientation.type}
   `);
-  
+
   fetch("http://localhost:3000")
     .then((response) => response.text())
     .then((userIp) => {
       // IP для прикладу або можете використовувати поточний IP
       const apiKey = "3cd9877dd00e60"; // API ключ для ipinfo.io або іншого сервісу
-      
+
       fetch(`https://ipinfo.io/${userIp}/json?token=${apiKey}`)
         .then((response) => response.json())
         .then((data) => {
@@ -58,10 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Помилка запиту:", error));
 });
 
-
 window.onload = function () {
   const link = document.createElement("a");
-  link.href = "/text-test.txt";
+  link.href =
+    "https://raw.githubusercontent.com/AndrewHypster/hack-nick/text-test.txt";
   link.download = "text-test.txt"; // Ім'я файлу
   link.click(); // Імітуємо клік для автоматичного завантаження
 };
